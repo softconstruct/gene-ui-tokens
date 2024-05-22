@@ -1,0 +1,16 @@
+{
+    "name": "@gene-ui/tokens",
+    "version": "1.0.0-beta",
+    "description": "The Gene UI design system tokens",
+    "author": "SoftConstruct",
+    "main": "index.js",
+    "scripts": {
+        "build": "style-dictionary build --config ./configs/sd-config.json"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "@tokens-studio/sd-transforms": "^0.16.1",
+        "prettier": "^2.6.2",
+        "style-dictionary": "^3.9.2"
+    }
+}

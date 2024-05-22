@@ -1,0 +1,28 @@
+{
+    "source": ["./tokens/*.json"],
+    "preprocessors": ["tokens-studio"],
+    "platforms": {
+        "css": {
+            "transformGroup": "css",
+            "buildPath": "./dist/css/",
+            "prefix": "GUIT",
+            "files": [
+                {
+                    "destination": "tokens.css",
+                    "format": "css/variables"
+                }
+            ]
+        },
+        "js": {
+            "transformGroup": "js",
+            "buildPath": "./dist/js/",
+            "prefix": "GUIT",
+            "files": [
+                {
+                    "destination": "tokens.js",
+                    "format": "javascript/es6"
+                }
+            ]
+        }
+    }
+}
