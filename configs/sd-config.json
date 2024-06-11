@@ -1,6 +1,5 @@
 {
     "source": ["./tokens/*.json"],
-    "preprocessors": ["tokens-studio"],
     "platforms": {
         "css": {
             "transformGroup": "css",
@@ -9,7 +8,10 @@
             "files": [
                 {
                     "destination": "tokens.css",
-                    "format": "css/variables"
+                    "format": "css/variables",
+                    "options": {
+                        "outputReferences": true
+                    }
                 }
             ]
         },
