@@ -1,6 +1,7 @@
 {
     "prettier.configPath": "configs/.prettierrc",
     "cSpell.words": [
+        "geneui",
         "GUIT"
     ],
 }
