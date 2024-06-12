@@ -5,10 +5,15 @@
     "author": "SoftConstruct",
     "main": "index.js",
     "scripts": {
-        "build": "style-dictionary build --config ./configs/sd-config.json"
+        "build": "babel-node --config-file ./configs/.babelrc ./scripts/preBuild.js && style-dictionary build --config ./configs/sd-config.json && babel-node --config-file ./configs/.babelrc ./scripts/postBuild.js",
+        "bump-up-commit": "babel-node --config-file ./configs/.babelrc ./scripts/postPublish.js"
     },
     "license": "MIT",
     "devDependencies": {
+        "@babel/cli": "^7.24.7",
+        "@babel/core": "^7.24.7",
+        "@babel/node": "^7.24.7",
+        "@babel/preset-env": "^7.24.7",
         "prettier": "^2.6.2",
         "style-dictionary": "^3.9.2"
     }
