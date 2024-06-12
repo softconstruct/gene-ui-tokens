@@ -1,3 +1,7 @@
+1. add build and publish pipelines
+2. fix tokens studio json generation for sem collections refs
+3. create package, publish beta version and start testing
+
 # Gene UI tokens
 
 > The tokens used in the [@geneui/components](https://www.npmjs.com/package/@geneui/components)
@@ -26,7 +30,7 @@ designer-centric process we do our best to provide an abstraction level and auto
 #### Technical
 
 1. Fork this repository under your org or personal account
-2. Add your NPM account secret variable `NPM_REGISTRY_KEY`
+2. Add your NPM account secret variable `NPM_AUTOMATION_ACCESS_TOKEN`
 3. Replace the package name like `@geneui/tokens-pascal` or something like this, and other
    stuff(author, etc...) in your `package.json` file
 4. Create personal access token and keep it you need it later
@@ -60,7 +64,7 @@ yarn add @geneui/tokens-pascal
 npm install --save @geneui/tokens-pascal
 ```
 
-### Bootstrap
+#### Bootstrap
 
 Pass your tokens package to the `GeneUIProvider` component
 
