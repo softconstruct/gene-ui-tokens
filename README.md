@@ -1,7 +1,3 @@
-1. add build and publish pipelines
-2. fix tokens studio json generation for sem collections refs
-3. create package, publish beta version and start testing
-
 # Gene UI tokens
 
 > The tokens used in the [@geneui/components](https://www.npmjs.com/package/@geneui/components)
@@ -89,9 +85,9 @@ and its usage in components.
 ## 📜 Changelog
 
 Stay up-to-date with the latest changes and improvements by checking our
-[Changelog](https://github.com/softconstruct/gene-ui-components/blob/main/CHANGELOG.md).
+[Changelog](https://github.com/softconstruct/gene-ui-tokens/blob/main/CHANGELOG.md).
 
 ## ⚖️ License
 
 The Gene UI design system tokens is licensed under the
-[MIT License](https://github.com/softconstruct/gene-ui-components/blob/main/LICENSE)
+[MIT License](https://github.com/softconstruct/gene-ui-tokens/blob/main/LICENSE)
