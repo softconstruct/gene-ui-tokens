@@ -26,7 +26,7 @@ designer-centric process we do our best to provide an abstraction level and auto
 #### Technical
 
 1. Fork this repository under your org or personal account
-2. Add your NPM account secret variable `NPM_REGISTRY_KEY`
+2. Add your NPM account secret variable `NPM_AUTOMATION_ACCESS_TOKEN`
 3. Replace the package name like `@geneui/tokens-pascal` or something like this, and other
    stuff(author, etc...) in your `package.json` file
 4. Create personal access token and keep it you need it later
@@ -60,7 +60,7 @@ yarn add @geneui/tokens-pascal
 npm install --save @geneui/tokens-pascal
 ```
 
-### Bootstrap
+#### Bootstrap
 
 Pass your tokens package to the `GeneUIProvider` component
 
@@ -85,9 +85,9 @@ and its usage in components.
 ## 📜 Changelog
 
 Stay up-to-date with the latest changes and improvements by checking our
-[Changelog](https://github.com/softconstruct/gene-ui-components/blob/main/CHANGELOG.md).
+[Changelog](https://github.com/softconstruct/gene-ui-tokens/blob/main/CHANGELOG.md).
 
 ## ⚖️ License
 
 The Gene UI design system tokens is licensed under the
-[MIT License](https://github.com/softconstruct/gene-ui-components/blob/main/LICENSE)
+[MIT License](https://github.com/softconstruct/gene-ui-tokens/blob/main/LICENSE)
