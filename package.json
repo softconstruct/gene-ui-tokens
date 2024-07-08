@@ -1,7 +1,7 @@
 {
     "name": "@geneui/tokens",
     "description": "The Gene UI design system tokens",
-    "version": "1.0.0-beta",
+    "version": "1.1.0-beta",
     "author": "SoftConstruct",
     "homepage": "https://github.com/softconstruct/gene-ui-tokens#readme",
     "repository": {
