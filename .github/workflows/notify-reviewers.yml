@@ -14,8 +14,6 @@ jobs:
                   COMMIT_URL=${{ github.event.head_commit.url }}
                   COMMIT_AUTHOR=${{ github.event.pusher.name }}
 
-                  MESSAGE="@channel\New commit on Gene UI Tokens: [#$COMMIT_ID]($COMMIT_URL) by $COMMIT_AUTHOR"
-
-                  echo($MESSAGE)
+                  MESSAGE="@channel\New commit on Gene UI Tokens: [#$COMMIT_ID]($COMMIT_URL) by @$COMMIT_AUTHOR"
 
                   curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"$MESSAGE\", \"username\": \"GitHub\", \"icon_url\": \"https://github.githubassets.com/favicons/favicon.png\"}" $INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT
