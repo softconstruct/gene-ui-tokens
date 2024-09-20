@@ -16,5 +16,6 @@ jobs:
 
                   MESSAGE="@channel\New commit on Gene UI Tokens: [#$COMMIT_ID]($COMMIT_URL) by $COMMIT_AUTHOR"
 
+                  echo($MESSAGE)
+
                   curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"$MESSAGE\", \"username\": \"GitHub\", \"icon_url\": \"https://github.githubassets.com/favicons/favicon.png\"}" $INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT
-                  
