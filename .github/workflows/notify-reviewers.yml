@@ -1,20 +1,21 @@
 name: Notify Reviewers
 on:
     push:
-        branches: ["release/*"]
+        branches: ['release/*']
 jobs:
     send_notification:
         runs-on: ubuntu-latest
         steps:
             - name: Send Notification
               env:
-                  INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT: ${{ secrets.INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT }}
+                  INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT:
+                      ${{ secrets.INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT }}
               run: |
                   COMMIT_ID=${{ github.sha }}
                   COMMIT_URL=${{ github.event.head_commit.url }}
                   COMMIT_AUTHOR=${{ github.event.pusher.name }}
                   COMMIT_MESSAGE=${{ github.event.head_commit.message }}
 
-                  MESSAGE="@channel\nNew commit on `@geneui/tokens`\nCommit: [#$COMMIT_ID]($COMMIT_URL) by @$COMMIT_AUTHOR\nMessage: $COMMIT_MESSAGE"
+                  MESSAGE="@channel\nNew commit on **@geneui/tokens**\nCommit: [#$COMMIT_ID]($COMMIT_URL) by @$COMMIT_AUTHOR\nMessage: $COMMIT_MESSAGE"
 
                   curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"$MESSAGE\", \"username\": \"GitHub\", \"icon_url\": \"https://github.githubassets.com/favicons/favicon.png\"}" $INTERNAL_NOTIFICATION_CHANNEL_API_ENDPOINT
