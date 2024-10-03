@@ -14,7 +14,7 @@ jobs:
                   COMMIT_ID=${{ github.sha }}
                   COMMIT_URL=${{ github.event.head_commit.url }}
                   COMMIT_AUTHOR=${{ github.event.pusher.name }}
-                  COMMIT_MESSAGE=${{ github.event.head_commit.message }}
+                  COMMIT_MESSAGE="${{ github.event.head_commit.message }}"
 
                   MESSAGE="@channel\nNew commit on **@geneui/tokens**\nCommit: [#$COMMIT_ID]($COMMIT_URL) by @$COMMIT_AUTHOR\nMessage: $COMMIT_MESSAGE"
 
