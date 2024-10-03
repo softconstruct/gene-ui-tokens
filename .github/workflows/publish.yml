@@ -2,9 +2,9 @@ name: Publish to NPM
 on:
     pull_request:
         types:
-          - closed
+            - closed
         branches:
-          - main
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
                   VERSION=$(jq -r '.version' dist/package.json)
                   VERSION_URL="https://www.npmjs.com/package/@geneui/tokens/v/$VERSION"
 
-                  MESSAGE="@channel\nExciting news! New version [$VERSION]($VERSION_URL) of @geneui/tokens is published with new features and improvements! on NPM"
+                  MESSAGE="@channel\nExciting news 🚀\n The new version [$VERSION]($VERSION_URL) of the **@geneui/tokens** is published with new features and improvements! on NPM"
 
                   curl -X POST -H "Content-Type: application/json" -d "{\"text\": \"$MESSAGE\", \"username\": \"NPM\", \"icon_url\": \"https://static-production.npmjs.com/b0f1a8318363185cc2ea6a40ac23eeb2.png\"}" $COMMUNITY_NOTIFICATION_CHANNEL_API_ENDPOINT
             - name: 🚀 Run bump up commit
