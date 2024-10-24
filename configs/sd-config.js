@@ -23,7 +23,7 @@ StyleDictionary.registerFormat({
     formatter: function ({ dictionary }) {
         const declarations = dictionary.allProperties
             .map((prop) => {
-                return `export declare const ${prop.name}: "${prop.value}";`;
+                return `export declare const ${prop.name}: '${prop.value.replace(/'/g, "\\'")}';`;
             })
             .join('\n');
 
