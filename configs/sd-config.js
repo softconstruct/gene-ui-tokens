@@ -1,3 +1,6 @@
+const StyleDictionary = require('style-dictionary');
+
+// Transformer for handling light/dark mode tokens
 function lightDarkTransformer(json) {
     Object.keys(json).forEach((key) => {
         const value = json[key];
@@ -13,6 +16,20 @@ function lightDarkTransformer(json) {
     });
     return json;
 }
+
+// Register a custom TypeScript declaration format (.d.ts)
+StyleDictionary.registerFormat({
+    name: 'typescript/declarations',
+    formatter: function ({ dictionary }) {
+        const declarations = dictionary.allProperties
+            .map((prop) => {
+                return `export declare const ${prop.name}: "${prop.value}";`;
+            })
+            .join('\n');
+
+        return `// Auto-generated TypeScript declarations for design tokens\n${declarations}`;
+    }
+});
 
 module.exports = {
     parsers: [
@@ -42,6 +59,17 @@ module.exports = {
             buildPath: './dist/js/',
             prefix: 'GUIT',
             files: [{ destination: 'tokens.js', format: 'javascript/es6' }]
+        },
+        ts: {
+            transformGroup: 'js',
+            buildPath: './dist/',
+            prefix: 'GUIT',
+            files: [
+                {
+                    destination: 'index.d.ts', // Generates index.d.ts
+                    format: 'typescript/declarations' // Uses the custom .d.ts format
+                }
+            ]
         }
     }
 };
