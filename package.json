@@ -1,7 +1,7 @@
 {
     "name": "@geneui/tokens",
     "description": "The Gene UI design system tokens",
-    "version": "1.6.0-beta",
+    "version": "1.7.0-beta",
     "author": "SoftConstruct",
     "homepage": "https://github.com/softconstruct/gene-ui-tokens#readme",
     "repository": {
@@ -17,6 +17,7 @@
         "tokens-library"
     ],
     "main": "index.js",
+    "typings": "index.d.ts",
     "scripts": {
         "build": "babel-node --config-file ./configs/.babelrc ./scripts/preBuild.js && style-dictionary build --config ./configs/sd-config.js && babel-node --config-file ./configs/.babelrc ./scripts/postBuild.js",
         "bump-up-commit": "babel-node --config-file ./configs/.babelrc ./scripts/postPublish.js"
@@ -27,7 +28,8 @@
         "@babel/node": "^7.24.7",
         "@babel/preset-env": "^7.24.7",
         "prettier": "^2.6.2",
-        "style-dictionary": "^3.9.2"
+        "style-dictionary": "^3.9.2",
+        "typescript": "^5.6.3"
     },
     "license": "MIT"
 }
