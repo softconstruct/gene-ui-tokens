@@ -17,7 +17,7 @@
         "tokens-library"
     ],
     "main": "index.js",
-    "typings": "index.d.ts",
+    "types": "index.d.ts",
     "scripts": {
         "build": "babel-node --config-file ./configs/.babelrc ./scripts/preBuild.js && style-dictionary build --config ./configs/sd-config.js && babel-node --config-file ./configs/.babelrc ./scripts/postBuild.js",
         "bump-up-commit": "babel-node --config-file ./configs/.babelrc ./scripts/postPublish.js"
